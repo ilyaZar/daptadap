@@ -5,7 +5,7 @@
   <a href="https://codecov.io/gh/ilyaZar/daptadap"><img src="https://img.shields.io/codecov/c/github/ilyaZar/daptadap/master?style=flat-square&logo=codecov&logoColor=white&labelColor=6b3fa0&color=4b2d73" alt="code coverage"></a>
   <a href="https://github.com/ilyaZar/daptadap"><img src="https://img.shields.io/github/r-package/v/ilyaZar/daptadap/master?filename=DESCRIPTION&style=flat-square&label=version&labelColor=4a999d&color=346c6e" alt="package version"></a>
   <a href="https://www.r-project.org"><img src="https://img.shields.io/badge/R-package-264a6e?style=flat-square&logo=r&logoColor=white&labelColor=276DC3" alt="R package"></a>
-  <a href="https://github.com/ilyaZar/daptadap/blob/master/LICENSE.md"><img src="https://img.shields.io/github/license/ilyaZar/daptadap?style=flat-square&logo=opensourceinitiative&logoColor=white&labelColor=629944&color=446a30" alt="license"></a>
+  <a href="https://github.com/ilyaZar/daptadap/blob/master/LICENSE.md"><img src="https://img.shields.io/badge/license-MIT-446a30?style=flat-square&logo=opensourceinitiative&logoColor=white&labelColor=629944" alt="license MIT"></a>
 </p>
 
 A small Debug Adapter Protocol helper for neovim-driven R console debugging.
