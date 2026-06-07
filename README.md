@@ -10,20 +10,23 @@
 
 A small Debug Adapter Protocol helper for neovim-driven R console debugging.
 
-`daptadap` runs inside an interactive R process and exposes enough DAP
-behavior for a Neovim DAP client to drive breakpoints, stack frames, locals,
-evaluation, and stepping through R's `browser()` machinery.
+`daptadap` runs inside an interactive R process and exposes DAP behavior for
+the Neovim debugging workflow built around
+[`R.nvim`](https://github.com/R-nvim/R.nvim) and
+[`nvim-dap-r`](https://github.com/ilyaZar/nvim-dap-r). It lets Neovim drive
+breakpoints, stack frames, locals, evaluation, and stepping through R's
+`browser()` machinery.
 
 ## Scope
 
-This package is intentionally narrow. It is not a replacement for the full
-VS Code R debugger stack, and it is not a standalone editor integration. The
-current target is the classic `R.nvim` console workflow used by `nvim-dap-r`.
+This package is intentionally narrow. The current target is the classic
+[`R.nvim`](https://github.com/R-nvim/R.nvim) console workflow used by
+[`nvim-dap-r`](https://github.com/ilyaZar/nvim-dap-r).
 
 The package owns the R-side helper:
 
 - starts a local DAP socket from the R process
-- writes connection metadata for the editor-side DAP client
+- writes connection metadata for the Neovim-side DAP client
 - records DAP breakpoints
 - sources R files with injected `browser()` stops
 - reports stack frames, scopes, variables, and evaluated expressions
@@ -43,7 +46,7 @@ pak::pak(".")
 
 ## Basic Flow
 
-Editor integrations usually call these functions for you. A minimal manual
+In normal use, `nvim-dap-r` calls these functions from Neovim. A minimal manual
 session looks like this:
 
 ```r
@@ -56,9 +59,9 @@ dap_debug_source("path/to/script.R")
 dap_stop()
 ```
 
-`dap_start()` writes connection metadata so the editor can attach a DAP client.
+`dap_start()` writes connection metadata so Neovim can attach a DAP client.
 `dap_debug_source()` then sources a file while honoring breakpoints registered
-by that client.
+from Neovim.
 
 ## Public API
 
@@ -69,33 +72,13 @@ by that client.
 | `dap_pump()`         | Process DAP requests at an R browser stop    |
 | `dap_debug_source()` | Source an R file with DAP breakpoints active |
 
-## Development
-
-Run the test suite:
-
-```sh
-Rscript -e 'testthat::test_dir("tests/testthat")'
-```
-
-Run a package check:
-
-```sh
-R CMD build .
-R CMD check --no-manual --no-build-vignettes daptadap_0.0.1.tar.gz
-```
-
-Run local coverage:
-
-```sh
-Rscript -e 'covr::package_coverage()'
-```
 
 ## Status
 
 `daptadap` is early-stage infrastructure for R debugging UX experiments. The
-current behavior is tested with fake DAP clients and interactive Neovim
+current behavior is roughly tested with fake DAP clients and interactive Neovim
 workflows, but the DAP surface is deliberately limited to the features needed
-by the current editor integration.
+by the current Neovim integration.
 
 ## License
 
