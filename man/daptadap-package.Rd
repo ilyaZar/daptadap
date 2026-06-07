@@ -9,7 +9,7 @@
 Debug Adapter Protocol helper internals for R console workflows.
 }
 \author{
-\strong{Maintainer}: daptadap contributors \email{noreply@example.com}
+\strong{Maintainer}: Ilya Zarubin \email{zarubin@wiso.uni-koeln.de}
 
 }
 \keyword{internal}

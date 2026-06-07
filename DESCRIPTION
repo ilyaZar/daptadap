@@ -2,9 +2,9 @@ Package: daptadap
 Title: Debug Adapter Helper for R Console Workflows
 Version: 0.0.1
 Authors@R:
-    person(given = "daptadap", family = "contributors",
+    person(given = "Ilya", family = "Zarubin",
            role = c("aut", "cre"),
-           email = "noreply@example.com")
+           email = "zarubin@wiso.uni-koeln.de")
 Description: Provides a small Debug Adapter Protocol helper for R console
     workflows such as the nvim-dap-r classic R.nvim backend.
 License: MIT + file LICENSE
