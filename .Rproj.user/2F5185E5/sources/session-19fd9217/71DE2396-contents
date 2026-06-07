@@ -1,0 +1,16 @@
+Package: daptadap
+Title: Debug Adapter Helper for R Console Workflows
+Version: 0.0.1
+Authors@R:
+    person(given = "daptadap", family = "contributors",
+           role = c("aut", "cre"),
+           email = "noreply@example.com")
+Description: Provides a small Debug Adapter Protocol helper for R console
+    workflows such as the nvim-dap-r classic R.nvim backend.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
+Imports:
+    jsonlite,
+    later
